@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>straight-code | Dashboard</title>
+  <link href="../../../../assets/straight-code.png" rel="shortcut icon">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'><link rel="stylesheet" href="./style.css">
+<script src="../../../form.js"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
+  <i class="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
+  <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
+    <img
+         class="rounded-pill img-fluid"
+         width="65"
+         src="../../../../assets/straight-code.png"
+         alt="">
+    <div class="ms-2">
+      <h5 class="fs-6 mb-0">
+        <a class="text-decoration-none" href="#">straight-code</a>
+      </h5>
+      <p class="mt-1 mb-0"></p>
+    </div>
+  </div>
+
+  <div class="search position-relative text-center px-4 py-3 mt-2">
+    <input type="text" class="form-control w-100 border-0 bg-transparent" placeholder="Search here">
+    <i class="fa fa-search position-absolute d-block fs-6"></i>
+  </div>
+
+  <ul class="categories list-unstyled">
+    <li class="has-dropdown">
+      <i class="uil-estate fa-fw"></i><a href="#"> Dashboard</a>
+      <ul class="sidebar-dropdown list-unstyled">
+        <li><a href="#">Tasks</a></li>
+        <li><a href="#">Goals</a></li>
+        <li><a href="#">Updates</a></li>
+        <li><a href="#">To Do</a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </li>
+    <li class="">
+      <i class="uil-folder"></i><a href="#"> File manager</a>
+    </li>
+    <li class="">
+      <button  onclick="signOut()">
+      Sign Out
+      </button>
+    </li>
+   
+  </ul>
+</aside>
+
+<section id="wrapper">
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid mx-2">
+      <div class="navbar-header">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="uil-bars text-white"></i>
+        </button>
+        <a class="navbar-brand" href="#">Your<span class="main-color">Dashboard</span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="toggle-navbar">
+        <ul class="navbar-nav ms-auto">
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="p-4">
+    <div class="welcome">
+      <div class="content rounded-3 p-3">
+        <h1 class="fs-3">Welcome to straight-code</h1>
+        <p class="mb-0"></p>
+      </div>
+    </div>
+<!--
+    <section class="statistics mt-4">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
+            <i class="uil-envelope-shield fs-2 text-center bg-primary rounded-circle"></i>
+            <div class="ms-3">
+              <div class="d-flex align-items-center">
+                <h3 class="mb-0">45</h3> <span class="d-block ms-2">Emails</span>
+              </div>
+              <p class="fs-normal mb-0"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="box d-flex rounded-2 align-items-center mb-4 mb-lg-0 p-3">
+            <i class="uil-file fs-2 text-center bg-danger rounded-circle"></i>
+            <div class="ms-3">
+              <div class="d-flex align-items-center">
+                <h3 class="mb-0">10</h3> <span class="d-block ms-2">Projects</span>
+              </div>
+              <p class="fs-normal mb-0"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="box d-flex rounded-2 align-items-center p-3">
+            <i class="uil-users-alt fs-2 text-center bg-success rounded-circle"></i>
+            <div class="ms-3">
+              <div class="d-flex align-items-center">
+                <h3 class="mb-0">3</h3> <span class="d-block ms-2">Users</span>
+              </div>
+              <p class="fs-normal mb-0"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+  -->
+
+    <section class="charts mt-4">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="chart-container rounded-2 p-3">
+            <h3 class="fs-6 mb-3">Activity</h3>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="chart-container rounded-2 p-3">
+            <h3 class="fs-6 mb-3">Reach</h3>
+            <canvas id="myChart2"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--
+    <section class="admins mt-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box">
+            <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="../../../../assets/straight-code.png"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">straight-code</h3>
+                <p class="mb-0"></p>
+              </div>
+            </div>
+            <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="../../../../assets/eye.png"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">RwondazTheGreat</h3>
+                <p class="mb-0"></p>
+              </div>
+            </div>
+            <div class="admin d-flex align-items-center rounded-2 p-3">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="../../../../assets/unknown.png"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">unknownCoder</h3>
+                <p class="mb-0"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+         <h4>Moderators:</h4>
+            <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="../../../../assets/straight-code.png"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">straight-code</h3>
+                <p class="mb-0"></p>
+              </div>
+            </div>
+            <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="../../../../assets/straight-code.png"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">straight-code</h3>
+                <p class="mb-0"></p>
+              </div>
+            </div>
+            <div class="admin d-flex align-items-center rounded-2 p-3">
+              <div class="img">
+                <img class="img-fluid rounded-pill"
+                     width="75" height="75"
+                     src="../../../../assets/straight-code.png"
+                     alt="admin">
+              </div>
+              <div class="ms-3">
+                <h3 class="fs-5 mb-1">straight-code</h3>
+                <p class="mb-0"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <section class="statis mt-4 text-center">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="box bg-primary p-3">
+            <i class="uil-eye"></i>
+            <h3>154</h3>
+            <p class="lead">Page views</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="box bg-danger p-3">
+            <i class="uil-user"></i>
+            <h3>5</h3>
+            <p class="lead">User registered</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+          <div class="box bg-warning p-3">
+            <i class="uil-shopping-cart"></i>
+            <h3>4</h3>
+            <p class="lead">Product sales</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="box bg-success p-3">
+            <i class="uil-feedback"></i>
+            <h3>4</h3>
+            <p class="lead">Transactions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  -->
+    </section>
+  </div>
+</section>
+<!-- partial -->
+<script src="./script.js"></script>
+<!-- for signout button-->
+<script src="./index.js"></script>
+<!--other-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.jshttps://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

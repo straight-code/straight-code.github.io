@@ -1,0 +1,394 @@
+body {
+    overflow: hidden;
+    background: #3694;
+  }
+  
+  .cartoon {
+    --skin: #fca;
+    --hair: #963;
+    --light: #fff5;
+    --shade: #a003;
+    width: 70vmin;
+    aspect-ratio: 1;
+    position: absolute;
+    bottom: 29vmin;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  
+  .cartoon * {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  
+  .head {
+    left: 15%;
+    top: 10%;
+    width: 65%;
+    height: 50%;
+    background:
+      radial-gradient(100% 50% at 45% 0%, var(--shade) 55%, #0000 0)
+      ;
+    background-color: var(--skin);
+    border-radius: 100% 110% 0 0;
+    border: 0.75vmin solid;
+    border-bottom: 0;
+    box-shadow: inset -1vmin 0 var(--light);
+  }
+  
+  .eye {
+    width: 40%;
+    height: 50%;
+    background:
+      radial-gradient(circle at 71% 45%, #fff 2%, #0000 0),
+      radial-gradient(circle at 75% 50%, #000 10%, #0000 0)
+      ;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 0.75vmin solid;
+    left: 66%;
+    top: 57%;
+    box-shadow: -0.5vmin 0vmin 0 0.125vmin var(--shade)
+  }
+  
+  .eye ~ .eye {
+    left: 32%;
+    top: 62%;
+    transform: scale(1.05)
+  }
+  
+  .forehead {
+    background: var(--skin);
+    width: 20%;
+    height: 15%;
+    border-radius: 50% / 100%;
+    border-top: 0.25vmin solid #0000;
+    border-right: 1vmin solid;
+    top: 53%;
+    left: 83%;
+    box-shadow: inset -1vmin 0vmin var(--light);
+  }
+  
+  .nose {
+    width: 22%;
+    height: 25%;
+    background:
+      radial-gradient(circle at 100% 40%, var(--shade), #0000 70%)
+      ;
+    background-color: var(--skin);
+    border: 0.9vmin solid;
+    border-top: 0.75vmin solid;
+    border-left: 0;
+    border-radius: 0 10vmin 10vmin 0;
+    top: 90%;
+    left: 70%;
+    transform: rotate(-10deg);
+    
+  }
+  
+  .ear {
+    width: 40%;
+    height: 65%;
+    background: var(--skin);
+    border: 0.75vmin solid;
+    border-right: 0.5vmin solid #0000;
+    border-left-width: 1.15vmin;
+    border-top-width: 1vmin;
+    border-radius: 100% / 80% 90% 100% 100%;
+    transform: rotate(-13deg);
+    top: 71%;
+    left: -25%;
+    box-shadow: 
+      inset 0.25vmin 1vmin var(--light),
+      inset 0.25vmin -1vmin 0 -0.5vmin var(--shade);
+  }
+  
+  .ear::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 57%;
+    height: 64%;
+    border: 0.75vmin solid #0000;
+    border-top: 1vmin solid #000;
+    border-bottom: 1vmin solid;
+    border-right-color: #000;
+    border-radius: 100%;
+    top: 17%;
+    left: 15%;
+    transform: rotate(-20deg);
+    box-shadow: 
+      inset -1vmin 0.5vmin 0 0.5vmin var(--shade)
+  }
+  
+  .ear::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 28%;
+    height: 21%;
+    border-radius: 50%;
+    top: 57%;
+    left: 45%;
+    border: 0.75vmin solid;
+    border-left: 1vmin solid;
+    border-right-color: transparent;
+    transform: rotate(26deg);
+    background: var(--skin);
+  }
+  
+  .mouth {
+    width: 38%;
+    height: 20%;
+    border-radius: 100%;
+    border: 0.35vmin solid #0000;
+    border-bottom: 1vmin solid;
+    border-left: 1vmin solid transparent;
+    top: 120%;
+    left: 52%;
+    transform: rotate(5deg);
+  }
+  
+  .mouth::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    border: 0.5vmin solid #0000;
+    border-left: 0.75vmin solid;
+    transform: rotate(20deg);
+    top: 55%;
+    left: 3%;
+  }
+  
+  .hair {
+    background: var(--hair);
+    width: 45%;
+    height: 70%;
+    border-radius: 50%;
+    border: 0.75vmin solid;
+    border-left-width: 1vmin;
+    left: -23%;
+    top: 10%;
+    box-shadow:
+      inset 2vmin 0 var(--shade);
+  }
+  
+  .hair-top {
+    width: 110%;
+    height: 50%;
+    background: var(--hair);
+    left: -10%;
+    top: -25%;
+    border-radius: 100% 130% 100%;
+    border: 0.75vmin solid;
+    border-left-width: 1vmin;
+    transform: rotate(-5deg);
+    box-shadow: 
+      inset -4vmin 0 0 -1.5vmin var(--light),
+      inset 2vmin 0 var(--shade);
+  }
+  
+  .hair-top::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 55%;
+    width: 21.5%;
+    height: 50%;
+    background: var(--hair);
+  }
+  
+  .cartoon > .hair {
+    left: 36%;
+    height: 40%;
+    box-shadow: inset -0.75vmin 0.5vmin var(--light);
+  }
+  
+  .eyebrow {
+    width: 36%;
+    height: 14%;
+    background: var(--hair);
+    border: 0.75vmin solid;
+    border-radius:  100% 40% 100% 0 / 50% 100%;
+    top: 39%;
+    left: 72%;
+    transform: rotate(4deg);
+    box-shadow: 
+      inset -1vmin 0 var(--light), 
+      inset 1vmin 0 var(--shade);
+  }
+  
+  .eyebrow + .eyebrow {
+    top: 42%;
+    left: 28%;
+    transform: scaleX(-1) rotate(10deg) scale(1.05);
+  /*   box-shadow: 0.5vmin 0.25vmin var(--shade); */
+    box-shadow: 
+      inset -1vmin 0 var(--shade),
+      inset 0.5vmin 0.25vmin var(--light);;
+  }
+  
+  .chin {
+    left: 20%;
+    top: 46%;
+    width: 65%;
+    height: 49%;
+    background: var(--skin);
+    border-radius: 0 100% 80% 100%;
+    border: 0.75vmin solid;
+    border-bottom-width: 1.5vmin;
+    border-right-width: 1vmin;
+    box-shadow: 
+      inset -2vmin 0 var(--light),
+      inset 0.5vmin 0 var(--shade);
+  }
+  
+  .chin::before {
+    content: "";
+    position: absolute;
+    background: var(--skin);
+    width: 15%;
+    height: 30%;
+    bottom: 12%;
+    left: 0.5%;
+    box-shadow: inset 1vmin 0 var(--shade);
+  }
+  
+  .neck {
+    width: 35%;
+    height: 38%;
+    background:
+      radial-gradient(140% 130% at 90% 0%, var(--shade) 55%, #0000 0)
+      ;
+    box-shadow: inset 1vmin 0 var(--shade);
+    background-color: var(--skin);
+    border: 1vmin solid;
+    border-radius: 100% /  0 0 20% 20%;
+    top: 70%;
+    left: 20%;
+  }
+  
+  .sideburn {
+    width: 12.5%;
+    height: 22%;
+    background: var(--hair);
+    border: 0.75vmin solid;
+    border-top: 0;
+    border-radius: 0 0 100% 100% / 20%;
+    transform: rotate(-18deg);
+    top: 70%;
+    left: 6.5%;
+  }
+  
+  .sideburn::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 20%;
+    background: var(--hair);
+    left: -0.75vmin;
+  }
+  
+  .shirt {
+    width: 120%;
+    height: 100%;
+    background: #369;
+    left: -24%;
+    top: 100%;
+    border-radius: 80% / 100%;
+    border: 1vmin solid;
+    border-top: 1.5vmin solid;
+    box-shadow: 
+      inset 1vmin 1vmin #0002,
+      inset -1vmin 0 var(--light);
+  }
+  
+  .neckborder {
+    width: 45%;
+    height: 13%;
+    border-radius: 50%;
+    left: 51%;
+    top: -3%;
+    transform: translateX(-50%);
+    border: 0.75vmin solid;
+  }
+  
+  
+  .straight-code-name {
+    color: #fffc;
+    position: absolute;
+    top: 27%;
+    left: 35%;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 6vmin;
+    transform: rotate(-2deg);
+  }
+  
+  .arms {
+    width: 65%;
+    height: 80%;
+    left: 22%;
+    top: 30%;
+    border: 0.75vmin solid;
+    border-left: 1vmin solid;
+    border-top: 0;
+    box-shadow: 0.5vmin 1vmin #0002;
+  }
+  
+  
+  /***/
+  
+  #youtube {
+    z-index: 2;
+    display: block;
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: red;
+    border-radius: 50% / 11%;
+    transition: transform 0.5s;
+  }
+  
+  #youtube:hover,
+  #youtube:focus {
+    transform: scale(1.1);
+  }
+  
+  #youtube::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 7.5%;
+    left: -6%;
+    width: 112%;
+    height: 85%;
+    background: red;
+    border-radius: 9% / 50%;
+  }
+  
+  #youtube::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 45px;
+    height: 30px;
+    border: 15px solid transparent;
+    box-sizing: border-box;
+    border-left: 30px solid white;
+  }
+  
+  #youtube span {
+    font-size: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  
