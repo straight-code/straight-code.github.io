@@ -583,13 +583,13 @@ nav.about {
   border-radius: 10px !important;
 }
 .works .photo-1 {
-  background-image: url("https://res.cloudinary.com/devkosov/image/upload/v1528043007/bg1_zyohzy2_hrj2n5.jpg");
+  background-image: url("https://straight-code.github.io/assets/blog.png");
 }
 .works .photo-2 {
-  background-image: url("https://res.cloudinary.com/devkosov/image/upload/v1528038821/Paris-Wallpaper-background-HD_n8wj1f.jpg");
+  background-image: url("https://straight-code.github.io/assets/github-clone.png");
 }
 .works .photo-3 {
-  background-image: url("https://res.cloudinary.com/devkosov/image/upload/v1528038821/Paris-Wallpaper-background-HD_n8wj1f.jpg");
+  background-image: url("https://straight-code.github.io/assets/minting-dapp.png");
 }
 .works .black-overlay {
   border-radius: 10px !important;
