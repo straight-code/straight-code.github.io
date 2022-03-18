@@ -591,6 +591,9 @@ nav.about {
 .works .photo-3 {
   background-image: url("https://straight-code.github.io/assets/minting-dapp.png");
 }
+.works .photo-4 {
+  background-image: url("https://straight-code.github.io/assets/more.png");
+}
 .works .black-overlay {
   border-radius: 10px !important;
   content: "";
