@@ -3,7 +3,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #f3f3f3;
+  background-color: #5a5a5a;
   color: #f3f3f3;
   font-family: Poppins, Raleway;
 }
@@ -44,7 +44,7 @@ body.about {
 .loader {
   position: fixed;
   z-index: 999;
-  background: #203f70;
+  background: #4f4f4f;
   height: 100vh;
   width: 100%;
   display: flex;
